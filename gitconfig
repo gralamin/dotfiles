@@ -1,0 +1,29 @@
+[user]
+	email = glen.nelson.1@gmail.com
+	name = Glen Nelson
+
+[alias]
+	st = status -sb
+	pr = remote prune origin
+	bl = blame -C -C -C
+[core]
+	autocrlf = false
+	editor = /usr/local/bin/emacsclient
+	pager = less -F -X
+[pager]
+	branch = false
+[diff]
+	algorithm = patience
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = store
+[pull]
+	rebase = true
+[column]
+	ui = auto
+[rerere]
+	enabled = true
